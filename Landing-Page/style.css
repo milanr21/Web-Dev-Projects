@@ -1,0 +1,83 @@
+/* Navbar ko part haru desgin garney yo css ma */
+/* NAVBAR STYLING */
+
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap");
+
+:root {
+  --modal-duration: 1s;
+  --primary-color: #30336b;
+  --secondary-color: #be2edd;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Cormorant Garamond", serif;
+  margin: 0;
+  /* Yo part paxi ho hai,after javascript */
+  transition: transform 0.4s ease;
+}
+
+body.show-nav {
+  /* should be same as width of nav */
+  transform: translateX(200px);
+}
+
+/* Sliding bar lai banauney part */
+
+nav {
+  background-color: var(--primary-color);
+  border-right: 2px solid rgba(200, 200, 200, 0.1);
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100vh;
+  z-index: 100;
+  transform: translate(-100%);
+}
+
+nav .logo {
+  padding: 30px 0;
+  text-align: center;
+}
+
+nav .logo img {
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+}
+
+nav ul {
+  padding: 0;
+
+  /* removes the bullet - bullet hataunxa */
+  list-style-type: none;
+  margin: 0;
+}
+
+nav ul li {
+  /* lis ko tala border rakhney */
+  border-bottom: 2px solid rgba(200, 200, 200, 0.1);
+  /* li haru lai ali tadha tadha rakney */
+  padding: 20px;
+}
+
+/* Selecting the first li - which is home */
+nav ul li:first-of-type {
+  /* home li ko mathi or top ma border include garney */
+  border-top: 2px solid rgba(200, 200, 200, 0.1);
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+  color: aqua;
+}

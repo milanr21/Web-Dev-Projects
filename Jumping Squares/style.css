@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  zoom: 90%;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.wrapper {
+  height: 80rem;
+  width: 100rem;
+  background-color: #1f5050;
+  border-radius: 5rem;
+  box-shadow: 3rem 3rem 6rem #888;
+  position: relative;
+}
+
+.rubber {
+  height: 50rem;
+  width: 64rem;
+  left: 16.5rem;
+  bottom: 24rem;
+  border-bottom: 1rem solid coral;
+  box-shadow: 0 1rem 0 #ddd;
+  animation: rubberAnim 2s infinite linear;
+}
+
+.wrapper div {
+  position: absolute;
+}
+.stick {
+  background-color: coral;
+  height: 40rem;
+  width: 3rem;
+  border-radius: 1rem 1rem 0 0;
+  bottom: 0;
+}
+
+.left-stick {
+  left: 15rem;
+  box-shadow: 0.2rem 0rem 3rem #888;
+}
+
+.right-stick {
+  right: 18rem;
+  box-shadow: 0.2rem 1rem 3rem #888;
+}
+
+.square {
+  width: 14rem;
+  aspect-ratio: 1;
+  background-color: #fff;
+  left: 42rem;
+  border-radius: 10px;
+  box-shadow: 0 0 0.2rem #555;
+  animation: squareAnime 2s infinite linear;
+}
+
+@keyframes rubberAnim {
+  0%,
+  20% {
+    border-radius: 0;
+    transform: translateY(0);
+  }
+
+  50%,
+  60% {
+    border-radius: 0 0 35rem 35rem;
+    transform: translateY(23rem);
+  }
+
+  65%,
+  100% {
+    border-radius: 0;
+    transform: translateY(0);
+  }
+}
+
+@keyframes squareAnime {
+  0% {
+    transform: translateY(5rem);
+  }
+  20% {
+    transform: translateY(40rem);
+  }
+  50%,
+  60% {
+    transform: translateY(64.5rem);
+  }
+  62% {
+    transform: translateY(45rem);
+  }
+
+  80% {
+    transform: translateY(10rem) rotateZ(90deg);
+  }
+
+  100% {
+    transform: translateY(5rem) rotateZ(90deg);
+  }
+}
